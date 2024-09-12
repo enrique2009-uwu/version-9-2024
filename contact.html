@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contacto</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+    <link rel="icon" type="image/png" href="./img/glowii.png">
+    <style>
+
+     /* Agregamos la class "menu" */
+        .menu {
+      text-transform: uppercase;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .logo {
+      height: 80px;
+      margin-right: 10px; /* Ajusta el margen derecho si es necesario */
+    }
+
+    .lista {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Ajusta el espacio entre los ítems del menú */
+    }
+
+    .item {
+      position: relative;
+    }
+
+    .item a {
+      display: block;
+      color: black;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .item a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      min-width: 250px;
+      z-index: 1000;
+    }
+
+    .submenu li a {
+      padding: 12px 16px;
+    }
+
+    .item:hover .submenu {
+      display: block;
+    }
+
+    .submenu li a:hover {
+      background-color: #f0f0f0;
+      color: #FCC300;
+    }
+
+    .submenu li a:active {
+      color: #FCC300;
+    }
+
+  </style>
+    <meta charset="utf-8" />
+    <title>Contáctanos</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+  <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+    <!-- Imagen de Urban -->
+       <img src="img/glow.png" alt="Icon" style="width: 115px; height: auto; object-fit: cover;">
+
+    <h1 class="m-0 text-primary">
+      <span style="color: #2C6397;">Urban</span>
+      <span style="color: #FCC300;">Glow</span>
+    </h1>
+  </a>
+  
+  <!-- Botón para menú en dispositivos móviles -->
+  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Menú principal -->
+  <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
+    <div class="navbar-nav ms-auto">
+      <a href="index.html" class="nav-item nav-link">Inicio</a>
+      <a href="about.html" class="nav-item nav-link">Nosotros</a>
+      
+      <!-- Menú desplegable para Problemáticas -->
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" id="problematicaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Problemáticas</a>
+        <ul class="dropdown-menu" aria-labelledby="problematicaDropdown">
+          <li><a href="expansión urbana.html" class="dropdown-item">Expansión Urbana</a></li>
+          <li><a href="desigualdad.html" class="dropdown-item">Desigualdad Socioespacial</a></li>
+          <li><a href="transporte deficiente.html" class="dropdown-item">Transporte Deficiente</a></li>
+          <li><a href="espacios verdes.html" class="dropdown-item">Espacios Verdes Limitados</a></li>
+          <li><a href="abastecimientos basicos.html" class="dropdown-item">Servicios Básicos Limitados</a></li>
+          <li><a href="islas de calor.html" class="dropdown-item">Islas de Calor</a></li>
+        </ul>
+      </div>
+      
+      <a href="foro.html" class="nav-item nav-link">Foro</a>
+      <a href="contact.html" class="nav-item nav-link active">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+    <!-- Navbar End -->
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="h-100 bg-light d-flex align-items-center p-5">
+              <div class="btn-lg-square bg-white flex-shrink-0">
+                <i class="fa fa-map-marker-alt text-primary"></i>
+              </div>
+              <div class="ms-4">
+                <p class="mb-2">
+                  <span class="text-primary me-2">#</span>Dirección
+                </p>
+                <h5 class="mb-0" style="font-size: 16px;">9ª Calle Oriente Nº 408 Barrio Concepción, San Miguel, El Salvador.</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="h-100 bg-light d-flex align-items-center p-5">
+              <div class="btn-lg-square bg-white flex-shrink-0">
+                <i class="fa fa-phone-alt text-primary"></i>
+              </div>
+              <div class="ms-4">
+                <p class="mb-2">
+                  <span class="text-primary me-2">#</span>Llámenos
+                </p>
+                <h5 class="mb-0" style="font-size: 16px;">+503 2606 0976</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="h-100 bg-light d-flex align-items-center p-5">
+              <div class="btn-lg-square bg-white flex-shrink-0">
+                <i class="fa fa-envelope-open text-primary"></i>
+              </div>
+              <div class="ms-4">
+                <p class="mb-2">
+                  <span class="text-primary me-2">#</span>Correo electrónico
+                </p>
+                <h5 class="mb-0" style="font-size: 16px;">
+                info@grupoq.superate.org.sv</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="display-5 mb-4"><span style="color:#2C6397;">¿Tienes preguntas?</span> <span style="color:#FCC300;"> ¡No dudes en contactarnos!</span> <span style="color:#2C6397;"> Estamos para servirte.
+            </span></h1>
+            <form action="https://formspree.io/f/xvgpkyzd" method="POST">
+              <p class="mb-4">
+                La comunicación es importante para poder mostrar interés en un San Miguel mejorado, escríbenos mediante este formulario, con gusto responderemos.
+              </p>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control bg-light border-0"
+                      id="name"
+                      name="name"
+                      placeholder="Tu Nombre"
+                      required
+                    />
+                    <label for="name">Ingrese su nombre</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control bg-light border-0"
+                      id="email"
+                      name="email"
+                      placeholder="Tu Correo Electrónico"
+                      required
+                    />
+                    <label for="email">Ingrese su correo electrónico</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control bg-light border-0"
+                      id="subject"
+                      name="subject"
+                      placeholder="Asunto"
+                      required
+                    />
+                    <label for="subject">Título</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control bg-light border-0"
+                      placeholder="Deja tu mensaje aquí"
+                      id="message"
+                      name="message"
+                      style="height: 100px"
+                      required
+                    ></textarea>
+                    <label for="message">Mensaje</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary w-100 py-3" type="submit">
+                    Enviar mensaje
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="h-100" style="min-height: 400px">
+              <iframe
+                class="rounded w-100 h-100"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15519.824666313181!2d-88.1722435!3d13.4767987!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7b2b85e19431a3%3A0x5d4e5a54960cf71!2zwqFTdXDDqXJhdGUhIEdydXBvIFE!5e0!3m2!1ses!2ssv!4v1721544115338!5m2!1ses!2ssv"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                frameborder="0"
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+ <!-- Footer Start -->
+    <div
+      class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Address</h5>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>9ª Calle Oriente Nº 408 Barrio Concepción, San Miguel, El Salvador.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Contact us</h5>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+503 2606 0976
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Our Email</h5>
+           <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>
+              info@grupoq.superate.org.sv
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Our social networks</h5>
+            <div class="d-flex pt-2">
+          
+              <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/superategrupoq?locale=es_LA"
+              target="_blank"><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@centrosuperategrupoq3664"
+              target="_blank"><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/superategrupoq/?hl=es"
+              target="_blank"><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a class="border-bottom" href="index.html">Urban Glow</a>, All
+              Right Reserved.
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <br />Distributed By:
+              <a href="index.html" target="_blank">Urban Glow</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

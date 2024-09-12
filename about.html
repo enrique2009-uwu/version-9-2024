@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nosotros</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+    <style>
+
+    /* Agregamos la class "menu" */
+        .menu {
+      text-transform: uppercase;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .logo {
+      height: 80px;
+      margin-right: 10px; /* Ajusta el margen derecho si es necesario */
+    }
+
+    .lista {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Ajusta el espacio entre los ítems del menú */
+    }
+
+    .item {
+      position: relative;
+    }
+
+    .item a {
+      display: block;
+      color: black;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .item a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      min-width: 250px;
+      z-index: 1000;
+    }
+
+    .submenu li a {
+      padding: 12px 16px;
+    }
+
+    .item:hover .submenu {
+      display: block;
+    }
+
+    .submenu li a:hover {
+      background-color: #f0f0f0;
+      color: #FCC300;
+    }
+
+    .submenu li a:active {
+      color: #FCC300;
+    }
+
+
+    /* Estilo para la sección de equipo */
+    #equipo {
+        text-align: center;
+        padding: 5rem;
+    }
+
+    /* Contenedor de los miembros del equipo */
+    .miembros {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 1rem; 
+    }
+
+    /* Estilo para cada miembro del equipo */
+    .miembro {
+        width: calc(33.333% - 1rem); 
+        margin-bottom: 1rem; /* Espacio en la parte inferior de cada miembro */
+        box-sizing: border-box; 
+    }
+
+    /* Estilo para las imágenes de los miembros */
+    .imagen {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .imagen img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /* Estilo para la información de cada miembro */
+    .info {
+        background-color: #146fc4;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+
+    /* Estilo para el nombre de cada miembro */
+    .info h2 {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        color: white;
+    }
+
+    /* Estilo para la descripción de cada miembro */
+    .info p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: white; /* Ajustado para mejor contraste */
+    }
+  </style>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+  <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+    <!-- Imagen de Urban -->
+    <img src="img/glow.png" alt="Icon" style="width: 115px; height: auto; object-fit: cover;">
+    <h1 class="m-0 text-primary">
+      <span style="color: #2C6397;">Urban</span>
+      <span style="color: #FCC300;">Glow</span>
+    </h1>
+  </a>
+  
+  <!-- Botón para menú en dispositivos móviles -->
+  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Menú principal -->
+  <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
+    <div class="navbar-nav ms-auto">
+      <a href="index.html" class="nav-item nav-link">Inicio</a>
+      <a href="about.html" class="nav-item nav-link active">Nosotros</a>
+      
+      <!-- Menú desplegable para Problemáticas -->
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" id="problematicaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Problemáticas</a>
+        <ul class="dropdown-menu" aria-labelledby="problematicaDropdown">
+          <li><a href="expansión urbana.html" class="dropdown-item">Expansión Urbana</a></li>
+          <li><a href="desigualdad.html" class="dropdown-item">Desigualdad Socioespacial</a></li>
+          <li><a href="transporte deficiente.html" class="dropdown-item">Transporte Deficiente</a></li>
+          <li><a href="espacios verdes.html" class="dropdown-item">Espacios Verdes Limitados</a></li>
+          <li><a href="abastecimientos basicos.html" class="dropdown-item">Servicios Básicos Limitados</a></li>
+          <li><a href="islas de calor.html" class="dropdown-item">Islas de Calor</a></li>
+        </ul>
+      </div>
+      
+      <a href="foro.html" class="nav-item nav-link">Foro</a>
+      <a href="contact.html" class="nav-item nav-link">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+   
+    <!-- Page Header End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+           <!--<p><span class="text-primary me-2">#</span>Bienvenido/a a planificación urbana</p>-->
+            <h1 class="display-5 mb-4" style="color: #2C6397;">
+              ¿Quiénes somos?
+            </h1>
+            <p class="mb-4" align="justify">
+              En Urban Planning, estamos dedicados a transformar el futuro urbano de San Miguel. Nuestro equipo está compuesto por apasionados profesionales y expertos en planificación urbana, teconlogía y sostenibilidad, comprometidos con ayudar a mejorar la calidad de vida de nuestro pueblo migueleño. <br><br>
+
+              A través de nuestro sitio web, buscamos informar, inspirar y colaborar con ciudadanos, autoridades y expertos en el desarrollo de propuestas efectivas que promuevan un futuro balanceado y eficiente para todos.
+              <br><br>
+
+              Gracias por visitar nuestro sitio y ser parte de este esfuerzo para mejorar nuestro entorno urbano.
+            </p>
+              
+
+            <!--<a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>-->
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="img-border">
+              <img class="img-fluid" src="img/airbnSM.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Testimonial Start -->
+      <section id="equipo">
+        <h1>Nuestro Equipo</h1> <br><br>
+        <div class="miembros">
+            <div class="miembro">
+                <div class="imagen">
+                    <img src="img/anderson.jpg" alt="Anderson Medrano">
+                </div>
+                <div class="info">
+                    <h2>Anderson Medrano</h2>
+                    <p>Lider en desarrollo web e implementaión de mapas satélitales. Especializado en la plataforma Google Earth Engine, motivando e impulsando la calidad del sitio web.</p>
+                </div>
+            </div> 
+            <div class="miembro">
+                <div class="imagen">
+                    <img src="img/jasmin.jpg" alt="Jasmin Salgado">
+                </div>
+                <div class="info">
+                    <h2>Jasmin Salgado</h2>
+                    <p>Experta en comunicación, conectando y fortaleciendo la colaboración e impacto de Urban Glow, implementando sus conocimientos informáticos en el sitio web.</p>
+                </div>
+            </div>
+            <div class="miembro">
+                <div class="imagen">
+                    <img src="img/emily.jpg" alt="Emily Quito">
+                </div>
+                <div class="info">
+                    <h2>Emily Quito</h2>
+                    <p>Diseñadora de interfaces, su enfoque en la creatividad ha dado una experiencia visual enriquecedora en el área estética de nuestro sitio web.</p>
+                </div>
+            </div>
+            <div class="miembro">
+                <div class="imagen">
+                    <img src="img/jessica.jpg" alt="Jessica Peña">
+                </div>
+                <div class="info">
+                    <h2>Jessica Peña</h2>
+                    <p>A través de la dura investigación e implementación de soluciones innovadoras, han dado el contenido apropiado para los usuariosdentro del tema de planificación urbana.</p>
+                </div>
+            </div>
+            <div class="miembro">
+                <div class="imagen">
+                    <img src="img/cristofer.jpg" alt="Cristofer Romero">
+                </div>
+                <div class="info">
+                    <h2>Cristofer Romero</h2>
+                    <p>Desarrolló contenido digital y multimedia, haciendo que la presentación, alcance e interfaz del sitio sea mejorado, con colores distintivos y atractivos.</p>
+                </div>
+            </div>
+            <div class="miembro">
+                <div class="imagen">
+                    <img src="img/josselin.jpg" alt="Josselin Cruz">
+                </div>
+                <div class="info">
+                    <h2>Josselin Cruz</h2>
+                    <p>Con la capacidad de redacción, ha sido capaz de aplicar soluciones, resolviendo problemas técnicos para mejorar el funcionamiento del contenido del sitio web.</p>
+                </div>
+            </div>
+            <div class="miembro">
+                <div class="imagen">
+                    <img src="img/jhonatan.jpg" alt="Jhonatan">
+                </div>
+                <div class="info">
+                    <h2>Jhonatan Chávez</h2>
+                    <p>Ha garantizado que todos los aspectos de Urban Glow funcionen para el beneficio de nuestros usuarios, haciendo así de una gran redacción y coherencia del contenido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial End -->
+
+       <!-- Footer Start -->
+    <div
+    class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn"
+    data-wow-delay="0.1s"
+  >
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Address</h5>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>9ª Calle Oriente Nº 408 Barrio Concepción, San Miguel, El Salvador.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Contact us</h5>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i>+503 2606 0976
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Our Email</h5>
+         <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i>
+            info@grupoq.superate.org.sv
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Our social networks</h5>
+          <div class="d-flex pt-2">
+        
+            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/superategrupoq?locale=es_LA"
+            target="_blank"><i class="fab fa-facebook-f"></i
+            ></a>
+            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@centrosuperategrupoq3664"
+            target="_blank"><i class="fab fa-youtube"></i
+            ></a>
+            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/superategrupoq/?hl=es"
+            target="_blank"><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a class="border-bottom" href="index.html">Urban Glow</a>, All
+            Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <br />Distributed By:
+            <a href="index.html" target="_blank">Urban Glow</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

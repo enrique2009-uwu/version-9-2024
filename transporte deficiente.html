@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Transporte deficiente</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+    <link rel="icon" type="image/png" href="./img/glowii.png">
+    <style>
+
+     /* Agregamos la class "menu" */
+        .menu {
+      text-transform: uppercase;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .logo {
+      height: 80px;
+      margin-right: 10px; /* Ajusta el margen derecho si es necesario */
+    }
+
+    .lista {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Ajusta el espacio entre los ítems del menú */
+    }
+
+    .item {
+      position: relative;
+    }
+
+    .item a {
+      display: block;
+      color: black;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .item a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      min-width: 250px;
+      z-index: 1000;
+    }
+
+    .submenu li a {
+      padding: 12px 16px;
+    }
+
+    .item:hover .submenu {
+      display: block;
+    }
+
+    .submenu li a:hover {
+      background-color: #f0f0f0;
+      color: #FCC300;
+    }
+
+    .submenu li a:active {
+      color: #FCC300;
+    }
+
+  
+  </style>
+      <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+         @keyframes slide-up {
+            from {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated-text {
+            animation: slide-up 2s ease-in-out;
+        
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 2rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer h5 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-links a {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .footer .social-links a:hover {
+            color: #cccccc;
+        }
+
+        .footer .copyright {
+            border-top: 1px solid #444;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; }
+    </style>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+  <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+    <!-- Imagen de Urban -->
+        <img src="img/glow.png" alt="Icon" style="width: 115px; height: auto; object-fit: cover;">
+
+    <h1 class="m-0 text-primary">
+      <span style="color: #2C6397;">Urban</span>
+      <span style="color: #FCC300;">Glow</span>
+    </h1>
+  </a>
+  
+  <!-- Botón para menú en dispositivos móviles -->
+  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Menú principal -->
+  <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
+    <div class="navbar-nav ms-auto">
+      <a href="index.html" class="nav-item nav-link">Inicio</a>
+      <a href="about.html" class="nav-item nav-link">Nosotros</a>
+      
+      <!-- Menú desplegable para Problemáticas -->
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link active dropdown-toggle" id="problematicaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Problemáticas</a>
+        <ul class="dropdown-menu" aria-labelledby="problematicaDropdown">
+          <li><a href="expansión urbana.html" class="dropdown-item">Expansión Urbana</a></li>
+          <li><a href="desigualdad.html" class="dropdown-item">Desigualdad Socioespacial</a></li>
+          <li><a href="transporte deficiente.html" class="dropdown-item">Transporte Deficiente</a></li>
+          <li><a href="espacios verdes.html" class="dropdown-item">Espacios Verdes Limitados</a></li>
+          <li><a href="abastecimientos basicos.html" class="dropdown-item">Servicios Básicos Limitados</a></li>
+          <li><a href="islas de calor.html" class="dropdown-item">Islas de Calor</a></li>
+        </ul>
+      </div>
+      
+      <a href="foro.html" class="nav-item nav-link">Foro</a>
+      <a href="contact.html" class="nav-item nav-link">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    
+    <!-- Header End -->
+
+    <!-- Video Modal Start -->
+    <div
+      class="modal modal-video fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- 16:9 aspect ratio -->
+            <div class="ratio ratio-16x9">
+              <iframe
+                class="embed-responsive-item"
+                src=""
+                id="video"
+                allowfullscreen
+                allowscriptaccess="always"
+                allow="autoplay"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Video Modal End -->
+     <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            
+           <!-- <p><span class="text-primary me-2">#</span>Welcome To Zoofari</p>-->
+            <h1 class="display-5 mb-4">
+              <span style="color:#2C6397;">Transporte</span>
+              <span style="color:#FCC300;">Deficiente</span>
+            </h1>
+            
+            <p class="mb-4" style="text-align: justify;">
+             El no cumplir adecuadamente las necesidades de desplazamiento de las personas, especialmente con aquellas que presentan una discapacidad o una movilidad reducida. Así como este debería mostrar un uso seguro, cómodo y autónomo sin importar su capacidad o género. <br><br>
+             La alcaldía de San Miguel, mostró que el 65.4% de las personas que utilizan transporte público han llegado a ser victimas de un transporte inseguro, ya que se ha presentado actos violentos ante ellos, así como un 49% de las mujeres, han reportado haber sufrido de acoso sexual en el transporte público, también el 19% dijo haber recibido violencia física o verbal, y el 7% de la población migueleña, mencionó haber experimentado alguna vez asaltos y discriminación.
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="img-border">
+              <img class="img-fluid" src="img/transporte.jpg" alt="" />
+            </div>
+          </div>
+
+            
+            <p class="animated-text" style="text-align: justify;">
+             Por otro lado, cuando empieza la época lluviosa, es cuando hay más afectaciones en la infraestructura de las carreteras, afectando el transporte eficiente, ya que no se les da un mantenimiento adecuado, las calles agrietadas, con baches, sumando las lluvias, llevan al aumento de accidentes automovilísticos, así como la falta de señalización, lleva a la confusión a las personas que no conozcan muy bien el sector, con el 12.9% de los accidentes presenciados en el país han ocurrido en San Miguel.</p>
+
+
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-6">
+                <!--Implementamos las problemáticas-->  
+            <h1 class="display-5 mb-0">
+              <span style="color:#2C6397;">Avanzando hacia un </span>
+              <span style="color:#FCC300;">transporte accesible</span>
+            </h1>
+          </div>
+          <hr>  
+          <p class="mb-4" style="text-align: justify;" align="right">
+              Ante esta realidad, es esencial implementar soluciones que transformen los transportes públicos en un sistema seguro, inclusivo y accesible para todos los migueleños. Por lo que se presentan una serie de propuestas para resolver este problema: <br>
+        </div>
+        <div class="row gy-5 gx-4">
+          <div
+            class="col-lg-4 col-md-4 col-sm-10 wow fadeInUp"
+            data-wow-delay="0.1s" 
+          >
+            <center><img class="img-fluid mb-3" src="iconosSolu/vigilanciaSegu.png" alt="Icon" style="width: 64px;height: 64px;" />
+            <h5 class="mb-3">Incremento de vigilancia y seguridad: </h5></center>
+            <p style="text-align:justify;">Instalar cámaras de seguridad en los autobúses y paradas de autobús. Aumentar la presencia de personal de seguridad, especialmente en horas pico y en rutas identificadas como peligrosas.</p
+            >
+          </div>
+          <div
+            class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp"
+            data-wow-delay="0.3s" 
+          >
+          <center><img class="img-fluid mb-3" src="iconosSolu/autobusCarril.png" alt="Icon" style="width: 64px;height: 64px;" />
+            <h5 class="mb-3">Uso de carriles exclusivos para autobuses: </h5></center>
+            <p style="text-align:justify;">Brindar a la ciudadanía servicios eficientes en los que se podría trasladar reduciendo sus tiempos de viaje evitando el tráfico vehicular de las horas pico, impulsando a que cada vez más personas dejen de usar sus vehículos particulares, promoviendo una movilidad sostenible y compartida.</p
+            >
+          </div>
+          <div
+            class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp"
+            data-wow-delay="0.5s"
+          >
+            <center><img class="img-fluid mb-3" src="iconosSolu/infraDisca.png" alt="Icon" style="width: 64px;height: 64px;" />
+            <h5 class="mb-3">Adaptación de infraestructura para personas con discapacidad: </h5></center>
+            <p style="text-align:justify;"
+              ></b>Asegurarse de que todos los autobuses y estaciones sean accesibles para personas con discapacidades, incluyendo rampas, asientos reservados y señalizaciones claras para facilitar el acceso de personas en sillas de ruedas y con movilidad reducida.</p
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    
+          
+            <!--<h1 class="display-5 mb-4">
+              <span style="color:#2C6397;">Avanzando hacia un </span>
+              <span style="color:#FCC300;">transporte accesible</span>
+            </h1>
+            <p class="mb-4" style="text-align: justify;" align="right">
+               Ante esta realidad, es esencial implementar soluciones que transformen los transportes públicos en un sistema seguro, inclusivo y accesible para todos los migueleños. Por lo que se presentan una serie de propuestas para resolver este problema:
+
+            <div><img src="iconosSolu/vigilanciaSegu.png" class="text-primary me-3" width="40px">
+             <b>Incremento de vigilancia y seguridad: </b>Instalar cámaras de seguridad en los autobúses y paradas de autobús. Aumentar la presencia de personal de seguridad, especialmente en horas pico y en rutas identificadas como peligrosas.
+           </div>
+
+           <div><img src="iconosSolu/autobusCarril.png" class="text-primary me-3" width="40px">
+             <b>Uso de carriles exclusivos para autobuses: </b>Brindar a la ciudadanía servicios eficientes en los que se podría trasladar reduciendo sus tiempos de viaje evitando el tráfico vehicular de las horas pico, impulsando a que cada vez más personas dejen de usar sus vehículos particulares, promoviendo una movilidad sostenible y compartida.
+            </div>
+
+            <div><img src="iconosSolu/infraDisca.png" class="text-primary me-3" width="40px">
+             <b>Adaptación de infraestructura para personas con discapacidad: </b>
+             Asegurarse de que todos los autobuses y estaciones sean accesibles para personas con discapacidades, incluyendo rampas, asientos reservados y señalizaciones claras para facilitar el acceso de personas en sillas de ruedas y con movilidad reducida.
+           </p>
+         </div>
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>-->
+          
+
+    <!-- Footer Start -->
+   <div
+    class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn"
+    data-wow-delay="0.1s"
+  >
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Address</h5>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>9ª Calle Oriente Nº 408 Barrio Concepción, San Miguel, El Salvador.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Contact us</h5>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i>+503 2606 0976
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Our Email</h5>
+         <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i>
+            info@grupoq.superate.org.sv
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Our social networks</h5>
+          <div class="d-flex pt-2">
+        
+            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/superategrupoq?locale=es_LA"
+            target="_blank"><i class="fab fa-facebook-f"></i
+            ></a>
+            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@centrosuperategrupoq3664"
+            target="_blank"><i class="fab fa-youtube"></i
+            ></a>
+            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/superategrupoq/?hl=es "
+              target="_blank"><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a class="border-bottom" href="index.html">Urban Glow</a>, All
+            Right Reserved.
+          </div>
+           <div class="col-md-6 text-center text-md-end">
+            <br />Distributed By:
+            <a href="index.html" target="_blank">Urban Glow</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
